@@ -2,7 +2,7 @@
 var prerender = require('./lib');
 
 var server = prerender({
-    pageLoadTimeout: 1 * 2000,
+    //pageLoadTimeout: 1 * 2000,
     chromeLocation: '/usr/bin/chromium-browser',
     /*
     chromeFlags: [
@@ -25,7 +25,7 @@ var server = prerender({
     logErrors: true
 });
 
-server.use(prerender.sendPrerenderHeader());
+//server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
 // server.use(prerender.blockResources());
 server.use(prerender.addMetaTags());
